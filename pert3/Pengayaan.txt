@@ -8,3 +8,13 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
 
 Jawaban:
+
+1.Keyword extends digunakan ketika sebuah class ingin mewarisi atribut dan method dari class lain. Dengan extends, sebuah subclass otomatis mendapatkan kemampuan dasar dari superclass tanpa harus menulis ulang semuanya, sehingga kode lebih efisien, mudah dirawat, dan lebih terstruktur.
+
+2. Method overloading dan overriding memiliki perbedaan yang cukup jelas. Overloading terjadi ketika ada beberapa method dengan nama yang sama dalam satu class, tetapi parameternya berbeda—fungsinya lebih ke fleksibilitas. Sementara overriding terjadi ketika subclass membuat ulang method milik superclass dengan isi atau perilaku yang berbeda. Overriding biasanya digunakan untuk menyesuaikan perilaku turunannya tanpa mengubah kode induknya.
+
+3. Keyword super di dalam constructor subclass seperti Manajer berfungsi untuk memanggil constructor milik superclass terlebih dahulu. Ini memastikan bahwa bagian-bagian dasar dari objek (yang ada di class induk) sudah diinisialisasi sebelum subclass menambahkan atribut atau logika tambahannya sendiri.
+
+4. Jika variabel di class Karyawan diubah menjadi private, maka class Manajer tidak bisa lagi mengaksesnya secara langsung karena private membatasi akses hanya di dalam class itu sendiri. Dampaknya, kode di Manajer yang membutuhkan variabel tersebut akan error. Solusinya adalah menyediakan getter/setter di class Karyawan atau mengubah access modifier menjadi protected jika memang ingin diakses oleh subclass.
+
+5. Inheritance atau pewarisan penting karena membantu kita menghindari duplikasi kode dan membuat struktur program lebih rapi. Dengan inheritance, class Manajer bisa menggunakan ulang atribut dan method dari Karyawan tanpa harus menulis ulang hal yang sama. Jika keduanya dibuat terpisah tanpa hubungan, akan ada banyak pengulangan kode dan perubahan di kemudian hari akan lebih sulit dilakukan.
