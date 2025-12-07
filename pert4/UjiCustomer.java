@@ -1,14 +1,23 @@
 public class UjiCustomer {
     public static void main(String[] args) {
 
-        // TODO: Buat object Customer
+        // object customer biasa
+        Customer c1 = new Customer("Budi Santoso", "CST-001", 500000);
 
-        // TODO: Buat object Member
+        // object member
+        Member m1 = new Member("Siti Aminah", "MBR-110", 1250000, 240, "Gold");
 
-        // TODO: Tampilkan judul data pelanggan
+        // judul
+        System.out.println("=== DATA CUSTOMER BELANJAKU ===");
 
-        // TODO: Tampilkan info untuk Customer biasa
+        // tampilkan info customer biasa
+        System.out.println("Status: Customer Biasa");
+        c1.tampilkanInfo();
 
-        // TODO: Tampilkan info untuk pelanggan Member
+        System.out.println(); // jarak
+
+        // tampilkan info member
+        System.out.println("Status: Member");
+        m1.tampilkanInfo();
     }
 }

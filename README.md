@@ -11,7 +11,7 @@
 
 1. Kode didesain untuk terdapat banyak kesalahan, maka dari itu. Perbaiki kode agar dapat berjalan sesuai yang diharapkan. 
 2. Jalankan Program dari setiap folder pertemuan, jika tidak maka akan konflik pada `public static void main args`
-
+   
 ## Soal Pengayaan
 
 Jawab Setiap file `Pengayaan.txt` di masing-masing file pengayaan, untuk pertanyaan refleksi terkait konsep OOP yang dipelajari di pertemuan tersebut. (tidak usah bikin file baru, langsung kerjakan di txt itu).

@@ -1,9 +1,20 @@
 class Customer {
-    // TODO: Buatkan atribut
+    // atribut dasar
+    String nama;
+    String idCustomer;
+    int totalBelanja;
 
-    // TODO: Sediakan constructor
+    // constructor
+    Customer(String nama, String idCustomer, int totalBelanja) {
+        this.nama = nama;
+        this.idCustomer = idCustomer;
+        this.totalBelanja = totalBelanja;
+    }
 
+    // method tampilkan info dasar
     void tampilkanInfo() {
-        // TODO: tampilkan data customer
+        System.out.println("Nama: " + nama +
+                " | ID: " + idCustomer +
+                " | Total Belanja: Rp " + totalBelanja);
     }
 }
