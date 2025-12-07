@@ -6,3 +6,15 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
 4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
 5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+
+Jawab:
+
+1. Abstract class adalah sebuah class dalam pemrograman berorientasi objek yang tidak bisa dibuat objeknya secara langsung, tetapi berfungsi sebagai kerangka dasar untuk class lain. Kita membutuhkan abstract class ketika ingin membuat struktur umum yang harus dimiliki semua subclass, namun detail implementasinya bisa berbeda-beda. Dengan abstract class, kita bisa menyusun aturan dasar, memastikan setiap turunan memiliki fungsi yang sama, dan menjaga konsistensi desain program. Ini sangat berguna untuk membangun sistem besar agar lebih teratur, mudah dikembangkan, dan fleksibel.
+
+2. Perbedaan utama antara abstract class dan class biasa terletak pada tujuannya. Abstract class digunakan sebagai konsep dasar atau blueprint yang tidak dapat di-instansiasi, sementara class biasa dapat langsung dibuat objeknya. Selain itu, abstract class dapat memiliki abstract method, yaitu method tanpa isi yang wajib diimplementasikan oleh subclass, sedangkan class biasa selalu memiliki implementasi lengkap di setiap method-nya. Abstract class cocok untuk struktur hierarki, sementara class biasa cocok untuk pembuatan objek langsung.
+
+3. Subclass wajib mengimplementasikan semua abstract method karena abstract method hanyalah deklarasi tanpa isi yang membutuhkan detail pelaksanaan. Parent class sebenarnya hanya menentukan “apa yang harus ada”, tetapi tidak menentukan “bagaimana caranya bekerja”. Oleh karena itu, subclass yang mewarisinya harus memberikan implementasi nyata sesuai kebutuhan masing-masing. Aturan ini memastikan bahwa semua subclass tetap mengikuti kontrak atau standar yang ditetapkan oleh abstract class.
+
+4. Abstract method tidak boleh memiliki isi karena sifatnya memang dirancang sebagai template atau kontrak. Tujuannya adalah memberikan aturan bahwa method tersebut wajib ada, tetapi cara kerjanya diserahkan kepada setiap subclass yang punya kebutuhan berbeda-beda. Jika abstract method memiliki isi, maka konsep “abstraksi” itu hilang, karena abstract method seharusnya hanya menjelaskan nama method, parameter, dan peran, bukan implementasinya.
+
+5. Abstract class mendukung polimorfisme dengan cara menyediakan tipe referensi umum yang dapat menunjuk ke berbagai objek subclass. Walaupun objek tersebut direferensikan melalui tipe abstract class, method yang dipanggil tetap mengikuti implementasi masing-masing subclass. Ini terjadi karena Java menggunakan konsep dynamic binding, di mana program mengeksekusi method sesuai objek yang sebenarnya, bukan sesuai tipe referensinya. Hasilnya, satu referensi abstract class bisa menghasilkan perilaku berbeda-beda, tergantung jenis objek yang dituju. Inilah yang membuat sistem menjadi fleksibel dan mudah diperluas.
