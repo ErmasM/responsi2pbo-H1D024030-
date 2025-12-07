@@ -7,3 +7,11 @@ Apa yang terjadi jika kita mencoba mengubah nilai suatu konstanta setelah objek 
 Bagaimana cara mendefinisikan konstanta dalam bahasa Java?
 
 Jawaban
+
+Dalam pemrograman berorientasi objek, fungsi (function) dan prosedur (procedure) sebenarnya sama-sama berupa blok kode yang bisa dipanggil, tetapi keduanya punya perbedaan penting. Function adalah method yang mengembalikan nilai, sehingga hasilnya bisa digunakan lagi oleh bagian program lain. Misalnya, ketika kita membuat function untuk menghitung luas atau menghitung total gaji, method tersebut akan memberikan nilai balik. Sementara itu, procedure adalah method yang tidak mengembalikan nilai — biasanya hanya menjalankan aksi tertentu, seperti menampilkan data ke layar atau mencetak pesan ke sistem. Jadi, inti perbedaannya terletak pada ada atau tidaknya nilai yang dikembalikan.
+
+Penggunaan konstanta (atau variabel final dalam Java) juga sangat penting dalam sebuah kelas. Konstanta membantu menjaga nilai tertentu agar tidak berubah selama program berjalan. Biasanya digunakan untuk nilai-nilai yang sifatnya tetap, seperti kode perusahaan, pajak, batas maksimal pengguna, atau angka persentase tertentu. Dengan membuatnya sebagai konstanta, program menjadi lebih aman dari perubahan yang tidak disengaja, lebih mudah dirawat, dan lebih jelas maksud penggunaannya oleh programmer lain.
+
+Jika kita mencoba mengubah nilai suatu konstanta setelah objek dibuat, Java tidak akan mengizinkannya. Program akan langsung menghasilkan error pada saat kompilasi. Hal ini karena nilai yang sudah ditandai dengan final memang tidak boleh dimodifikasi lagi. Sebagai contoh, jika kita menulis final int MAX_SPEED = 120; lalu mencoba menggantinya menjadi MAX_SPEED = 200;, maka Java akan menghentikan proses kompilasi dan memberikan pesan bahwa variabel final tidak boleh diubah.
+
+Untuk mendefinisikan konstanta dalam Java, kita cukup menggunakan keyword final, biasanya disertai dengan static jika konstanta tersebut ingin digunakan tanpa harus membuat objek. Format penulisannya umumnya memakai huruf kapital agar mudah dikenali. Contohnya public static final double PI = 3.14; atau public static final int MAX_USER = 100;. Dengan cara ini, nilai tersebut dijamin tetap dan tidak akan berubah selama program berjalan.
