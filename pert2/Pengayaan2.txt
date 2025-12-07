@@ -8,3 +8,11 @@ Jelaskan konsep encapsulation dan bagaimana method dapat membantu melindungi dat
 Mengapa constructor tidak memiliki return type, bahkan tidak menggunakan kata kunci void?
 
 Jawaban
+
+Constructor overloading adalah konsep dalam pemrograman berorientasi objek di mana sebuah class memiliki lebih dari satu constructor, tetapi masing-masing memiliki parameter yang berbeda-beda. Tujuannya adalah memberikan fleksibilitas saat membuat objek, sehingga developer bisa memilih constructor yang paling sesuai dengan kebutuhan datanya. Meskipun semua constructor memiliki nama yang sama dengan nama class-nya, Java bisa membedakan konstruktor tersebut berdasarkan jumlah parameter, tipe data parameter, atau urutan parameternya. Jadi, selama kombinasi parameternya berbeda, Java tidak akan bingung saat memanggil constructor tertentu.
+
+Dalam hal mengakses variabel, ada perbedaan besar antara mengubah nilai secara langsung melalui objek.variabel = nilai dan menggunakan method setter. Mengakses variabel secara langsung biasanya tidak disarankan karena membuka peluang terjadinya perubahan data yang tidak terkontrol. Sedangkan setter memberi ruang untuk validasi atau aturan tertentu sebelum data diubah, misalnya memastikan nilai tidak negatif, format sesuai, atau logika lainnya. Karena itu, setter memberikan kontrol yang lebih baik dan menjaga keamanan data dalam class.
+
+Konsep encapsulation sendiri adalah prinsip di mana data dan method yang bekerja dengan data tersebut disatukan dalam satu class, lalu data dibuat tidak bisa diakses bebas dari luar class. Untuk menjaganya, atribut biasanya dibuat private dan hanya bisa diakses melalui getter dan setter. Dengan cara ini, method berfungsi sebagai "penjaga pintu" yang memastikan bahwa setiap perubahan data tetap sesuai aturan, sehingga objek tidak mudah rusak atau disalahgunakan.
+
+constructor tidak memiliki return type, bahkan tidak menggunakan kata kunci void, karena fungsi utama constructor bukan untuk mengembalikan nilai, tetapi untuk menginisialisasi objek saat pertama kali dibuat. Java sudah mengetahui bahwa setiap kali kita membuat objek dengan keyword new, constructor akan otomatis dipanggil. Itulah sebabnya Java tidak membutuhkan return type pada konstruktor—perannya memang khusus, yaitu menyiapkan objek agar siap digunakan.
